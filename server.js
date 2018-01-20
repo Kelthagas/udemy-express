@@ -4,6 +4,7 @@ const fs = require('fs');
 
 // Express is a functional framework at its base
 // Things will run line by line
+const port = process.env.PORT || 3000;
 var app = express();
 
 // If you want to watch other extensions on nodemon, add "$ ** -e js,hbs,etc"
@@ -63,6 +64,6 @@ app.get('/bad', (req, res) => {
   })
 })
 
-app.listen(3000, () => {
-  console.log("Server is up on port: 3000");
+app.listen(port, () => {
+  console.log(`Server is up on port: ${port}`);
 });
